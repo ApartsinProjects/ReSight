@@ -43,9 +43,19 @@
     tr.edit td { color: #c00000; }
     @media print { body { background: #ffffff; } main { max-width: none; padding: 0; }
       h2 { page-break-after: avoid; } figure, table { page-break-inside: avoid; } }
+    .docbadge{position:fixed;top:14px;right:14px;z-index:9000;background:#0f4c81;color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;font-family:Arial;font-size:13px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+    .docbadge:hover{background:#12355b}
+    #gate{position:fixed;inset:0;background:#0f4c81;display:flex;align-items:center;justify-content:center;z-index:9999;font-family:Arial}
+    #gate .box{background:#fff;padding:26px 30px;border-radius:10px;max-width:320px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.3)}
+    #gate h2{margin:0 0 8px;color:#12355b;border:0}
+    #gate input{padding:9px;width:100%;box-sizing:border-box;border:1px solid #cbd5df;border-radius:5px;font-size:15px}
+    #gate button{margin-top:12px;padding:9px 18px;background:#0f4c81;color:#fff;border:0;border-radius:5px;cursor:pointer;font-size:14px}
+    #gate .err{color:#c00000;font-size:12px;height:14px;margin:8px 0 0}
   </style>
 </head>
 <body>
+<a class="docbadge" href="Application-2026-ReSight-YehuditAperstein_v3.docx">&#8681; DOCX version</a>
+<div id="gate"><div class="box"><h2>ReSight POC</h2><p style="margin:0 0 14px;color:#52606d;font-size:14px">Enter password to view</p><input id="pw" type="password" autofocus onkeydown="if(event.key==='Enter')rschk()"><button onclick="rschk()">Enter</button><p class="err" id="rserr"></p></div></div>
 <main>
   <div class="header">
     <p class="kicker">Full proposal &middot; Program for Funding Proof-of-Concept Research at VATAT-budgeted institutions, Cycle 2 &middot; Afeka Academic College of Engineering</p>
@@ -269,5 +279,9 @@
   <p class="edit"><span class="edit-label">Commercialization and IP:</span> Beachhead: license the reliability-scoring and failure-routing module as a plug-in to video-analytics and VMS vendors, via Afeka's technology-transfer office. The Sobol augmentation and reliability-score methods are already published; the patentable element in this POC is the failure-region detection and human-review routing mechanism, for which a provisional filing is planned by Month 16.</p>
 
 </main>
+<script>
+function rschk(){var v=document.getElementById('pw').value;if(v==='12345'){try{sessionStorage.setItem('rs_ok','1')}catch(e){}var g=document.getElementById('gate');if(g)g.remove();}else{document.getElementById('rserr').textContent='Incorrect password';}}
+try{if(sessionStorage.getItem('rs_ok')==='1'){var g=document.getElementById('gate');if(g)g.parentNode.removeChild(g);}}catch(e){}
+</script>
 </body>
 </html>
