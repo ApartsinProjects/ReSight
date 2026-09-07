@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReSight Afeka POC Full Submission</title>
+  <style>
+    body { margin: 0; background: #f5f7fa; color: #1f2933;
+      font-family: Arial, "Noto Sans Hebrew", sans-serif; line-height: 1.55; }
+    main { max-width: 930px; margin: 0 auto; padding: 30px; background: #ffffff; }
+    .header { border-bottom: 2px solid #d9e2ec; margin-bottom: 18px; padding-bottom: 12px; }
+    .kicker { margin: 0 0 6px; color: #52606d; font-size: 13px; }
+    h1 { margin: 0 0 6px; color: #12355b; font-size: 27px; line-height: 1.25; text-align: center; }
+    .he-title { direction: rtl; text-align: center; margin: 0 0 8px; color: #243b53; font-size: 18px; line-height: 1.35; }
+    .he-abstract { direction: rtl; text-align: justify; margin: 14px 0 18px; padding: 12px 14px;
+      border: 1px solid #d9e2ec; background: #f8fbff; color: #243b53; font-size: 14px; }
+    .he-abstract h2 { direction: rtl; text-align: right; margin-top: 0; }
+    h2 { margin: 22px 0 7px; padding-bottom: 4px; border-bottom: 1px solid #d9e2ec; color: #0f4c81; font-size: 17px; }
+    h3 { margin: 16px 0 5px; color: #243b53; font-size: 15px; }
+    p { margin: 0 0 9px; text-align: justify; font-size: 14.5px; }
+    ul { margin: 4px 0 10px; padding-left: 22px; }
+    li { margin: 0 0 5px; font-size: 14.5px; }
+    .meta p { margin: 0 0 3px; text-align: left; font-size: 13.5px; }
+    .label { color: #243b53; font-weight: 700; }
+    .abstract-block { margin: 10px 0 14px; padding: 12px 14px; border: 1px solid #d9e2ec; background: #f8fbff; }
+    .abstract-block h3 { margin-top: 0; }
+    .charcount { color: #7b8794; font-size: 12px; font-weight: 400; }
+    figure { margin: 12px 0 14px; padding: 8px; border: 1px solid #d9e2ec; background: #f8fbff; }
+    figure img { display: block; width: 100%; height: auto; }
+    figcaption { margin-top: 6px; color: #52606d; font-size: 12.8px; line-height: 1.35; text-align: left; }
+    table { border-collapse: collapse; width: 100%; margin: 8px 0 14px; font-size: 13.3px; }
+    th, td { border: 1px solid #cbd5df; padding: 5px 8px; text-align: left; vertical-align: top; }
+    th { background: #eef3f8; color: #243b53; }
+    .gantt td.mark { text-align: center; font-weight: 700; color: #0f4c81; background: #e6f0f8; }
+    .gantt td.on { text-align: center; background: #d3e6f5; }
+    .num { text-align: right; white-space: nowrap; }
+    .refs { padding-left: 0; list-style-position: inside; }
+    .refs li { text-align: left; font-size: 13.3px; margin-bottom: 6px; }
+    .star { color: #b23b00; font-weight: 700; }
+    .checkrow td:nth-child(2), .checkrow td:nth-child(3) { text-align: center; }
+    .note { color: #52606d; font-size: 13px; font-style: italic; }
+    .edit { color: #c00000; }
+    .edit p, p.edit { color: #c00000; }
+    .edit-label { color: #c00000; font-weight: 700; }
+    table.edit-tbl { border: 1px solid #c00000; }
+    table.edit-tbl th, table.edit-tbl td { border: 1px solid #c00000; color: #c00000; }
+    table.edit-tbl th { background: #fbeaea; }
+    .edit-tag { color: #c00000; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    @media print { body { background: #ffffff; } main { max-width: none; padding: 0; }
+      h2 { page-break-after: avoid; } figure, table { page-break-inside: avoid; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="header">
+    <p class="kicker">Full proposal &middot; Program for Funding Proof-of-Concept Research at VATAT-budgeted institutions, Cycle 2 &middot; Afeka Academic College of Engineering</p>
+    <h1>ReSight: AI for Repurposing Available Sensors into Actionable Intelligence</h1>
+    <p class="he-title" dir="rtl">ReSight: מערכת חישה וניתוח אופורטוניסטיים ממקורות חזותיים קיימים</p>
+    <div class="meta">
+      <p><span class="label">Principal Investigator:</span> Dr. Yehudit Aperstein</p>
+      <p><span class="label">Institute:</span> Afeka Academic College of Engineering</p>
+      <p><span class="label">Email:</span> apersteiny@afeka.ac.il</p>
+      <p><span class="label">Domain:</span> Artificial Intelligence (Applications)</p>
+      <p><span class="label">Total funding requested:</span> 350,000 NIS &nbsp;&middot;&nbsp; <span class="label">Duration:</span> 24 months</p>
+    </div>
+  </div>
+
+  <div class="he-abstract" dir="rtl">
+    <h2>תקציר בעברית</h2>
+    <p>ReSight היא מערכת מבוססת AI לחישה וניתוח אופורטוניסטיים ממקורות חזותיים קיימים: מצלמות עירוניות, מצלמות אבטחה, מצלמות דרך, מצלמות גוף, מצלמות רכב, מצלמות ATM ותמונות או סרטונים שמעלים אזרחים. לדוגמה, מצלמת ATM שהותקנה לצורכי אבטחה עשויה לקלוט גם רכב סמוך, מפגע ברחוב או אירוע חריג בסביבה. המערכת מיועדת להפיק תובנות שימושיות ממקורות שלא הוצבו במקור עבור משימת המטרה, גם כאשר המידע קטן, מעוות, רועש, מטושטש או קשה לפענוח אנושי. הגישה מאפשרת להרחיב את הערך של חיישנים ותשתיות שכבר הותקנו ושולם עבורם, במקום להקים מערך חיישנים ייעודי לכל יישום חדש. הטכנולוגיה נשענת על מחקר מבוסס של החוקרת הראשית ושותפיה, שהדגים שחזור מידע חזותי בתנאי צפייה קיצוניים [1]. במסגרת ה-POC יתורגמו יכולות אלו למנוע רב-שימושי להפקת תובנות פעולה, הערכת אמינות, תיעדוף אירועים, יצירת התרעות ותמיכה בהחלטות עבור עיר חכמה, אבטחה, מוקדי חירום ואינטגרטורים של מערכות וידאו.</p>
+  </div>
+
+  <h2>Abstracts</h2>
+  <div class="abstract-block">
+    <h3>English Abstract <span class="charcount">(up to 1,500 characters)</span></h3>
+    <p>ReSight is an AI core engine for opportunistic sensing and analysis from existing visual sources, including municipal cameras, security cameras, traffic cameras, body cameras, vehicle cameras, ATM cameras, and citizen-uploaded images or videos. It is designed to extract useful operational insights from sources that were not originally positioned for the target task, even when the relevant signal is small, distorted, noisy, blurred, compressed, partially occluded, or difficult for human interpretation. Building on the PI's established research demonstrating recovery of visual information under extreme viewing conditions [1], this POC will translate these capabilities into a reusable engine that turns imperfect visual evidence into structured findings, reliability metrics, alerts, triage, and decision support. By enabling existing visual infrastructure to support additional operational tasks without requiring dedicated sensors, ReSight aims to increase its practical and economic value for smart-city, surveillance, security, emergency-center, and video-integration workflows.</p>
+  </div>
+  <div class="abstract-block">
+    <h3>Relevance of the Proposed Research with the Selected Topic <span class="charcount">(up to 500 characters)</span></h3>
+    <p>ReSight is an applied-AI project that integrates computer vision, AI-based restoration, OCR, scene understanding, reliability scoring, and uncertainty-aware decision support to repurpose existing visual sources for new operational tasks. It demonstrates practical AI application in smart-city, security, surveillance, and public-infrastructure settings.</p>
+  </div>
+  <div class="abstract-block">
+    <h3>Applicability Abstract <span class="charcount">(up to 1,000 characters)</span></h3>
+    <p>ReSight addresses a clear applied gap: visual infrastructure is already installed and paid for, while most analytics remain tied to purpose-installed sensors. By extracting new operational value from existing cameras and visual sources, ReSight can reduce the need for dedicated sensing infrastructure and expand the return on existing investments. The system can scale as a cloud-based API for municipalities, transportation operators, security and homeland-security integrators, emergency centers, parking operators, and video-analytics vendors. The POC will demonstrate technical feasibility, reliability, and operational value in a bounded smart-city scenario, creating a basis for validation partnerships, licensing, integration, and future commercial deployment.</p>
+  </div>
+
+  <h2>Intellectual Property, Ethics, and Regulatory</h2>
+  <p><span class="label">Approved or submitted patents:</span> No. &nbsp; <span class="label">Industrial or commercial interests:</span> No.</p>
+  <table>
+    <thead><tr><th>Does the research involve any of the following?</th><th>Yes</th><th>No</th></tr></thead>
+    <tbody>
+      <tr class="checkrow"><td>Human participants</td><td></td><td>&#9632;</td></tr>
+      <tr class="checkrow"><td>Animals</td><td></td><td>&#9632;</td></tr>
+      <tr class="checkrow"><td>Protected natural assets</td><td></td><td>&#9632;</td></tr>
+      <tr class="checkrow"><td>Plants</td><td></td><td>&#9632;</td></tr>
+      <tr class="checkrow"><td>Schools</td><td></td><td>&#9632;</td></tr>
+    </tbody>
+  </table>
+  <p class="note">The PI acknowledges responsibility for ensuring all required approvals are valid and, when necessary, renewed throughout the research period. The research does not use infrastructure operated by international organizations, nor institutional or national infrastructure.</p>
+  <p class="edit"><span class="edit-label">Privacy and regulatory (proposed):</span> The POC uses only synthetic data, publicly licensed datasets, and, where a partner provides field media, data that has been approved and in which faces and license plates are masked or anonymized before processing. No personal data is collected from human participants and no biometric identification is performed. The project will comply with Israel's Privacy Protection Law and Privacy Protection Authority guidance on camera-based data; any use of partner field footage will be governed by a data-processing agreement established in Months 1 to 4.</p>
+
+  <h2>Research Groups</h2>
+  <p><span class="label">Principal Investigator:</span> Dr. Yehudit Aperstein, Afeka Academic College of Engineering. Expertise: intelligent systems, robust AI, computer vision, deep learning.</p>
+  <p class="edit"><span class="edit-label">Proposed team additions:</span></p>
+  <ul class="edit">
+    <li><span class="edit-label">Research Assistant / Software Developer</span> (to be recruited, MSc level, about 50% FTE): engine implementation, data pipeline, model-experiment orchestration, evaluation, and demonstrator.</li>
+    <li><span class="edit-label">Collaborators (in-kind):</span> I. Adamenko and O. Ben Aharon (restoration models and recoverability-map generation); Dr. A. Apartsin (evaluation methodology and reliability scoring). All are co-authors of the prior research [1] on which this POC builds.</li>
+  </ul>
+
+  <h2>Research Plan</h2>
+
+  <h3>1. Need Addressed by the Project</h3>
+  <p>Modern cities are full of visual sensors that were installed and tuned for specific tasks. Face-recognition cameras are positioned for access control, license-plate cameras for vehicle identification, traffic cameras for flow monitoring, dashboard cameras for insurance evidence, ATM cameras for security, and citizen-uploaded videos for reporting a local incident. Yet each of these sources also captures many other details about the surrounding world. A dashboard camera may capture a damaged road sign. An ATM camera may capture a nearby vehicle. A citizen video may contain evidence of flooding, crowding, smoke, infrastructure damage, or unsafe traffic behavior. Although these sensors and their supporting infrastructure involve significant cost, their practical value is usually limited to a single application.</p>
+  <p>The problem is that this secondary information is often difficult to use. The camera was not placed for the new task, so the object of interest may be extremely distorted: small, oblique, warped, noisy, blurred, compressed, partly occluded, poorly illuminated, motion-smeared, outside the best field of view, or extremely dewarped after geometric correction. In many cases, the useful signal is difficult for the human eye. Modern AI models can now extract rich, useful information from such difficult visual material, but operational users still need a system that can turn scattered, imperfect footage into actionable insight while determining when the extracted information is sufficiently reliable for operational use.</p>
+  <p>ReSight uses AI to convert difficult visual material into structured operational outputs and connect them to decisions such as alerts, triage, prioritization, and follow-up review. Its key differentiator is the opportunistic sensing approach: instead of requiring new dedicated sensors for every task, the system turns scattered visual evidence into reusable intelligence [2,3], substantially increasing the return on investment from existing sensing infrastructure. The proposed POC will test whether these capabilities can be integrated into a reusable operational engine.</p>
+  <p>Current market data shows a large sunk-cost opportunity. The global video-surveillance market was estimated at USD 53.57B in 2024 and is projected to reach USD 88.06B by 2031; hardware accounted for 61.8% of the market in 2024 [4]. The global smart-cities market was estimated at USD 615.7B in 2024 and is projected to reach USD 1,445.6B by 2030 [5]. These figures indicate that cities, security operators, and infrastructure owners are already investing heavily in cameras, storage, connectivity, command centers, and related digital infrastructure.</p>
+  <p>The analytics layer is growing even faster. The global video-analytics market was estimated at USD 12.71B in 2024 and is projected to reach USD 37.84B by 2030, while AI video analytics for smart cities alone is projected to grow from USD 8.50B in 2025 to USD 28.76B by 2030 [6,7]. ReSight targets the economic gap between these two facts: visual infrastructure is already installed and paid for, while additional AI value depends on reusing that same base for more than one task.</p>
+
+  <h3>2. Project Objective</h3>
+  <p>The objective is to build the ReSight core engine: a reusable AI-driven opportunistic sensing engine that extracts useful insights from available visual sources. The technology builds on recent work by the PI and collaborators on recovering visual information under extreme viewing angles [1]. The engine will accept a defined operational task and a class of sources, ingest or simulate relevant footage, run restoration and analytics models, extract structured findings, calculate reliability metrics, and provide actionable insights for operational use.</p>
+  <figure>
+    <img src="assets/resight-opportunistic-sensing.png" alt="ReSight repurposes heterogeneous visual sources into AI-supported operational insight">
+    <figcaption>Figure 1: ReSight repurposes heterogeneous visual sources, including CCTV, body cameras, dashcams, ATM cameras, and citizen phone footage, into AI-supported operational insight.</figcaption>
+  </figure>
+  <p>The first demonstrator will focus on a bounded vehicle and road-scene scenario under difficult viewing conditions, anchored in license-plate recovery and complemented by a road-scene analytics task. The license-plate component is scientifically grounded in the existing paper on recoverability under extreme viewing angles. The core engine, however, will be designed for additional smart-city, surveillance, and defense tasks, such as infrastructure condition monitoring, traffic-incident awareness, crowd-density estimation, emergency-signal detection, and perimeter situational awareness.</p>
+  <p class="edit"><span class="edit-label">Bounded demonstrator (proposed refinement):</span> The first demonstrator is a single bounded task: reading vehicle license plates from opportunistic, off-regime viewpoints (ATM, dashcam, body-cam, and citizen footage), with a secondary road-hazard cue as a stretch task. It is chosen because it is directly grounded in [1] and has a clear operational user and success criterion. The broader tasks above (crowd density, perimeter and emergency awareness) are a designed path beyond the POC, not POC deliverables.</p>
+
+  <h3>3. Existing Market Solutions</h3>
+  <p>The market includes license-plate recognition systems, video-management systems, smart-city analytics platforms, forensic video tools, and AI image-enhancement products. These products are valuable, but most are built around purpose-installed sensor arrays: the camera, lens, height, angle, illumination, lane coverage, field of view, and analytics model are selected together for a known operational regime. The analytics are then designed to work within these engineered limits, not to repurpose uncontrolled footage from cameras installed for other reasons.</p>
+  <p>Typical LPR deployments illustrate this limitation [8]. Axis recommends keeping both horizontal and vertical angles below 30 degrees and placing the capture point at about twice the mounting height; VIVOTEK guidance recommends vertical angle within 30 degrees, horizontal angle within 20 degrees, 15 to 30 meters between camera and reading point for roadside installations, and no more than two lanes per camera [9,10]. These ranges are appropriate for dedicated LPR infrastructure, but they do not describe the opportunistic regime in which an ATM camera, dashboard video, body camera, road camera, or citizen-uploaded clip may capture the relevant object from a difficult, distorted, or partial viewpoint. In contrast, the PI's recent research shows that AI-based recovery can read license plates even under extreme viewing angles above 80 degrees in the studied benchmark setting [1].</p>
+  <p>In contrast to purpose-installed systems that are optimized for a known operational regime, ReSight is designed for the uncontrolled regime of existing cameras, video platforms, citizen-report channels, and field media. It extracts actionable findings from heterogeneous sources, determines when the media supports the task, identifies unreliable operating conditions, and routes uncertain cases to human review. The financial logic is direct: cameras, connectivity, storage, and visual workflows are already installed and already paid for; ReSight increases the return on that installed base by enabling multiple additional applications on top of the same sensors. This creates a clear commercial path for municipalities, defense and homeland-security integrators, transportation operators, parking operators, emergency centers, and companies building analytics on top of existing visual data.</p>
+  <p class="edit"><span class="edit-label">Technical competition (proposed addition):</span> The relevant competitors are image-restoration models (Restormer [11], diffusion-based restorers), forensic enhancement tools (for example Amped FIVE), and multi-task scene-understanding APIs (for example AWS Rekognition, Azure Video Indexer). These improve or interpret imagery, but none reports where in the acquisition space its output is trustworthy, and none routes low-reliability cases to human review. ReSight's contribution is exactly this trust-aware, reuse-oriented layer on top of restoration and analytics.</p>
+
+  <h3>4. Deliverables, Milestones, and Metrics</h3>
+  <p><span class="label">Intermediate deliverables:</span></p>
+  <ul>
+    <li>A scenario generator for camera footage, mobile media, citizen-uploaded images and videos, viewing angle, blur, illumination, motion, compression, and resolution.</li>
+    <li>A modular AI restoration, recognition, and analytics engine that can extract OCR, object, vehicle, road-hazard, infrastructure, traffic, and emergency-event cues.</li>
+    <li>A reliability and analytics module with extracted insights, coverage, failure-region, and human-review metrics.</li>
+    <li>A demonstration interface showing source quality, extracted findings, task reliability, model comparison, failure boundaries, and recommended operational use.</li>
+    <li>An initial validation-partner and commercialization document focused on recovering additional value from existing sensors.</li>
+  </ul>
+  <p><span class="label">Final deliverable:</span> A working core engine showing how ReSight repurposes an opportunistic visual source, such as an existing camera stream or citizen-uploaded media, into structured insights and operational recommendations for a selected analytics task.</p>
+  <p><span class="label">Proposed milestones:</span> Months 1 to 4, define use cases, validation requirements, source types, insight schema, and evaluation metrics. Months 5 to 10, implement the synthetic scenario generator and baseline analytics pipeline. Months 11 to 16, implement insight extraction, reliability scoring, model comparison, and uncertainty routing. Months 17 to 20, validate the core engine on a realistic smart-city, surveillance, or defense scenario with feedback from engaged validation partners. Months 21 to 24, finalize the engine package, intellectual-property plan, and commercialization roadmap.</p>
+  <p><span class="label">Success metrics:</span> accuracy of extracted insights within reliable regions, coverage of the operational parameter space, stability of the reliability score, detection of failure regions, reduction in manual triage load, agreement with limited real or field-like validation, runtime for recommendation generation, and clarity of recommendations for an operational user.</p>
+  <p class="edit"><span class="edit-label">Success metrics (proposed targets, anchored to [1]):</span> (1) recovery keeps at least 90% of the defined viewing-angle space above the T=0.9 recoverability threshold, versus degraded input that is unrecoverable beyond roughly 60 to 70 degrees; (2) on held-out real data, restoration lifts extreme-angle whole-plate exact match by at least 15 points over the degraded baseline (cf. +15 to +38 points in [1]); (3) the reliability layer reaches boundary-AUC at least 0.92 with interior-failure score F at most 0.2, matching the discriminative cluster in [1]; (4) at least 40% reduction in items routed to human review at a false-accept rate at most 1%; (5) end-to-end inference under about 50 ms per frame (about 20 fps) per stream on a single cloud GPU, with the restoration stage at 8 to 22 ms as in [1].</p>
+
+  <h3>5. Research Novelty</h3>
+  <p>The scientific novelty began with a central obstacle in opportunistic sensing: models must work outside the controlled camera placement and narrow operating regimes assumed by purpose-built systems. Real training data usually reflects intended, easy-to-capture conditions, not the extreme viewpoints and degradations that appear when an existing camera is repurposed for a new task. Our prior work addressed this gap through smart synthetic augmentation, using scrambled Sobol quasi-Monte Carlo sampling to generate training examples across <span class="edit">the acquisition space swept in [1]: viewing angle, Gaussian blur, JPEG compression, colour jitter, and edge blending</span>. This protocol supported purpose training of restoration models from several architecture families, including encoder-decoder, transformer-based, GAN-based, and diffusion-based approaches [11], while exposing them to the difficult corner cases where opportunistic sensing must actually operate.</p>
+  <p class="edit"><span class="edit-label">5a. Quantified basis from prior research [1] (proposed addition):</span> In the benchmark of [1], AI restoration keeps oblique-view license plates readable across about 90 to 92% of the [0, 89] degree by [0, 89] degree viewing-angle grid at 90% or higher plate-level OCR accuracy (recoverability threshold T=0.9); recognition is near-perfect when both the lateral and elevational angles are below 70 degrees, and the recoverable region extends beyond 80 degrees on each axis, failing only in the double-extreme corner. Five restoration architectures were compared (U-Net, conditional U-Net, Restormer, Pix2Pix-GAN, and SR3 diffusion); they cluster in a narrow boundary-AUC band of 0.89 to 0.93 (best single model about 0.93, pointwise-max 0.934), while the reliability score F separates uniformly-capable discriminative models (F about 0.09 to 0.21) from a generative model with large interior failure pockets (F up to 1.12). On real data, restoration lifts extreme-angle recognition by +15 to +38 whole-plate exact-match points (for example CCPD 42.5 to 80.8%, Brazilian 63.2 to 86.1%, Mercosur 66.0 to 96.5%). The POC generalizes this measured capability from plates to a second road-scene task and packages restoration, analytics, reliability scoring, and human-review routing into one reusable engine.</p>
+  <p class="edit"><span class="edit-label">Prior-research to POC mapping (proposed addition):</span></p>
+  <table class="edit-tbl">
+    <thead><tr><th>Demonstrated in prior work [1]</th><th>What the POC adds</th><th>Deliverable (milestone)</th></tr></thead>
+    <tbody>
+      <tr><td>Sobol-sampled acquisition-space augmentation for plate recovery</td><td>Generalize augmentation from plates to road-scene objects</td><td>Scenario generator (M5 to M10)</td></tr>
+      <tr><td>Boundary-AUC and reliability score for one OCR task</td><td>Extend to multi-task outputs and human-review routing</td><td>Reliability module (M11 to M16)</td></tr>
+      <tr><td>Rejection-based selective inference [13,15]</td><td>Calibrated abstention on live or streamed input</td><td>Uncertainty routing (M11 to M16)</td></tr>
+      <tr><td>Offline benchmark evaluation</td><td>Validation on a realistic bounded scenario</td><td>Partner or public-data validation (M17 to M20)</td></tr>
+    </tbody>
+  </table>
+  <figure>
+    <img src="assets/resight-recovery-examples.png" alt="AI recovery of readable license-plate information from severely warped inputs">
+    <figcaption>Figure 2: Recent work by the PI and collaborators demonstrates AI recovery of readable license-plate information from severely warped and dewarped visual inputs [1].</figcaption>
+  </figure>
+  <p>The second innovation was trust-aware evaluation. Modern restoration models, especially generative GAN and diffusion families, can sometimes produce outputs that look plausible while being wrong under low-signal conditions [12]. For operational use, restoration quality must therefore be tied to task utility and to the conditions under which the output remains dependable. Our prior work did this by evaluating downstream OCR performance and introducing two operating-condition metrics: boundary-AUC, which estimates the outer extent of the recoverable region, and a reliability score, which measures the frequency and depth of failures inside that nominally recoverable region [1]. This distinction separates models that cover a wide operating area uniformly from models that appear broadly capable but contain hidden failure pockets. The same trust-aware principle also appears in the author's work on chest X-ray classification with rejection mechanisms, where uncertain predictions are deferred instead of forced into automatic decisions [13].</p>
+  <p>The present POC builds on this established scientific basis and focuses on translating these capabilities into an integrated, reusable operational engine combining restoration, analytics, reliability assessment, and uncertainty-aware routing.</p>
+
+  <h3>6. Required Resources</h3>
+  <p><span class="label">Cloud GPU compute:</span> used to train and compare large restoration and analytics models across source types, degradation levels, target applications, and model families. It will also support repeated experimental sweeps needed to establish recoverability maps, task-specific performance measurements, reliability scores, and failure-region analysis.</p>
+  <p><span class="label">Cloud storage and visual data infrastructure:</span> used to store large synthetic and permitted real visual datasets, including vehicles, streets, infrastructure, public-space events, citizen-uploaded media, and surveillance-like footage. It will also store generated training sets, augmented variants across viewing angle, perspective distortion, resolution, blur, motion, compression, illumination, occlusion, and sensor placement, plus model checkpoints, evaluation outputs, and recoverability-map artifacts.</p>
+  <p><span class="label">Software engineer or research assistant:</span> used to implement the reusable ReSight core engine, including data ingestion, augmentation workflows, model-experiment orchestration, recoverability-map generation, reliability scoring, and a demonstration interface for selected validation scenarios.</p>
+
+  <h3>7. Technological Innovation</h3>
+  <p>ReSight will be developed as a scalable AI inference engine for opportunistic visual sensing. The initial architecture will be cloud-first, using cloud GPU resources for heavy restoration, analytics, reliability estimation, and recoverability-map generation. The engine will be configurable to specific tasks and operational regimes, ingesting visual inputs from existing cameras, video files, still images, body cameras, dashboard cameras, ATM cameras, and citizen-uploaded media. Its output will be a structured stream of insights, confidence indicators, failure-region warnings, and human-review flags that can be consumed by subscribing systems through an API.</p>
+  <p>Beyond the present POC, the technology has two natural development directions. First, compact model variants can be adapted for on-board camera or edge-device inference where latency, bandwidth, privacy, or connectivity constraints make local processing valuable. This direction is supported by PTEENet and CalexNet, prior work on lightweight early-exit branches and calibrated selective inference [14,15]. Second, body-worn and mobile footage can be converted into compact situational views, building on prior work on panoramic incident summaries from long field videos [16]. Together, these paths give ReSight a practical product architecture: cloud GPU inference for complex tasks and large-scale experimentation, with future options for lighter on-camera analytics and field-video summarization in selected validated scenarios.</p>
+
+  <h3>8. External Partner</h3>
+  <p>We will seek a validation partnership with a municipality, such as Tel Aviv-Yafo, or a video-analytics provider, such as Motorola Solutions [17,18], to help define operational requirements, success criteria, and commercialization needs. The preferred first use case is a bounded smart-city scenario, such as citizen-reported road hazards or infrastructure damage, suitable for demonstrating the value of repurposing existing visual sources using synthetic, public, or approved field data.</p>
+  <p class="edit"><span class="edit-label">Commercialization and IP (proposed addition):</span> Beachhead: license the reliability-scoring and failure-routing module as a plug-in to video-analytics and VMS vendors, via Afeka's technology-transfer office. The Sobol augmentation and reliability-score methods are already published; the patentable element in this POC is the failure-region detection and human-review routing mechanism, for which a provisional filing is planned by Month 20.</p>
+  <p class="edit"><span class="edit-label">Risk analysis (proposed addition):</span></p>
+  <table class="edit-tbl">
+    <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr><td>Synthetic-to-real gap</td><td>Domain-randomized generator; partner or public real data for M17 to M20 validation</td></tr>
+      <tr><td>Generative hallucination (confident wrong plate)</td><td>Reliability score plus abstention; report false-accept rate as a primary metric</td></tr>
+      <tr><td>Partner or data access blocked</td><td>Synthetic-only plus public-dataset fallback (UFPR-ALPR, CCPD)</td></tr>
+      <tr><td>Compute cost overrun</td><td>Fixed cloud budget with checkpointing and capped sweeps</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Schedule and Work Plan (Gantt)</h2>
+  <table class="gantt">
+    <thead><tr><th>#</th><th>Task</th><th>M4</th><th>M10</th><th>M16</th><th>M20</th><th>M24</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Define use cases, validation requirements, source types, insight schema, and evaluation metrics.</td><td class="mark">X</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td>Implement the synthetic scenario generator and baseline analytics pipeline.</td><td></td><td class="mark">X</td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td>Implement insight extraction, reliability scoring, model comparison, and uncertainty routing.</td><td></td><td></td><td class="mark">X</td><td></td><td></td></tr>
+      <tr><td>4</td><td>Validate the core engine on a realistic smart-city, surveillance, or defense scenario with feedback from engaged validation partners.</td><td></td><td></td><td></td><td class="mark">X</td><td></td></tr>
+      <tr><td>5</td><td>Finalize the engine package, intellectual-property plan, and commercialization roadmap.</td><td></td><td></td><td></td><td></td><td class="mark">X</td></tr>
+      <tr><td>6</td><td>Prepare the initial validation-partner and commercialization document focused on recovering additional value from existing sensors.</td><td></td><td></td><td></td><td class="mark">X</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p class="edit"><span class="edit-label">Go/no-go gates (proposed addition):</span> G1 at M10: generator plus baseline meet their target on synthetic data. G2 at M16: reliability score meets its AUROC target. Task 3 depends on Task 2. Partner engagement and a public-dataset fallback (UFPR-ALPR, CCPD) start in Months 1 to 4 rather than only at M17 to M20, so validation does not depend on a partner materializing.</p>
+
+  <h2>Requested Budget</h2>
+  <p><span class="label">Total requested funding:</span> 350,000 NIS &nbsp;&middot;&nbsp; <span class="label">Duration:</span> 24 months &nbsp;&middot;&nbsp; <span class="label">Currency:</span> NIS</p>
+  <table>
+    <thead><tr><th>Budget item</th><th class="num">Sum (NIS)</th><th>Justification</th></tr></thead>
+    <tbody>
+      <tr><td>Personnel &ndash; Research Assistants, Students, and Other Research Staff</td><td class="num">190,000</td><td>Part-time research assistant / software developer for implementation of the ReSight POC, including data preparation, integration of restoration and analytics components, reliability scoring, evaluation, and demonstration interface development.</td></tr>
+      <tr><td>Technical Support and Consulting</td><td class="num">25,000</td><td>Specialized technical support for system integration, API development, deployment, and preparation of the demonstrator for operational validation.</td></tr>
+      <tr><td>Professional Services</td><td class="num">65,000</td><td>Cloud GPU computation, cloud storage, data-processing services, and other external computational services required for model adaptation, validation sweeps, and POC testing.</td></tr>
+      <tr><td>Equipment</td><td class="num">17,500</td><td>Local development and storage equipment required for software development, data handling, and demonstration of the POC.</td></tr>
+      <tr><td>Overhead (up to 15%)</td><td class="num">52,500</td><td>Institutional overhead according to the program guidelines.</td></tr>
+      <tr><td><span class="label">Total</span></td><td class="num"><span class="label">350,000</span></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p class="edit"><span class="edit-label">Budget notes (proposed clarification):</span> Personnel equals one about-50% FTE RA/developer over 24 months. Consider merging Technical support and consulting (25,000) into Professional services, or sharpen the split (consulting equals one-off integration and API expertise; professional services equals recurring cloud compute and storage). The 17,500 equipment line is a single developer workstation plus local staging storage, consistent with the cloud-first architecture.</p>
+
+  <h2>Bibliography</h2>
+  <p class="note">Sources marked with <span class="star">*</span> are the five most relevant sources not authored by the applicants.</p>
+  <ol class="refs">
+    <li>Adamenko, I., Ben Aharon, O., Aperstein, Y., &amp; Apartsin, A. (2026). Mapping License Plate Recoverability Under Extreme Viewing Angles for Opportunistic Urban Sensing. <em>AI</em>, 7(7), 237. https://doi.org/10.3390/ai7070237</li>
+    <li><span class="star">*</span> Lane, N. D., Eisenman, S. B., Musolesi, M., Miluzzo, E., &amp; Campbell, A. T. (2008). Urban sensing systems: Opportunistic or participatory? <em>Proceedings of the 9th Workshop on Mobile Computing Systems and Applications</em>, 11&ndash;16. https://doi.org/10.1145/1411759.1411763</li>
+    <li><span class="star">*</span> Ganti, R. K., Ye, F., &amp; Lei, H. (2011). Mobile crowdsensing: Current state and future challenges. <em>IEEE Communications Magazine</em>, 49(11), 32&ndash;39. https://doi.org/10.1109/MCOM.2011.6069707</li>
+    <li>MarketsandMarkets. (2025). Video surveillance market size, share &amp; analysis, 2031. https://www.marketsandmarkets.com/Market-Reports/video-surveillance-market-645.html</li>
+    <li>MarketsandMarkets. (2025). Smart cities market report 2025-2030. https://www.marketsandmarkets.com/Market-Reports/smart-cities-market-542.html</li>
+    <li>Grand View Research. (2025). Video analytics market size, share &amp; trends analysis report, 2030. https://www.grandviewresearch.com/industry-analysis/video-analytics-market</li>
+    <li>MarketsandMarkets. (2026). AI video analytics for smart cities market size, share and growth. https://www.marketsandmarkets.com/Market-Reports/ai-video-analytics-smart-cities-market-244577801.html</li>
+    <li><span class="star">*</span> Du, S., Ibrahim, M., Shehata, M., &amp; Badawy, W. (2013). Automatic License Plate Recognition (ALPR): A state-of-the-art review. <em>IEEE Transactions on Circuits and Systems for Video Technology</em>, 23(2), 311&ndash;325. https://doi.org/10.1109/TCSVT.2012.2203741</li>
+    <li>Axis Communications. (2026). Things to consider for license plate capture. https://www.axis.com/products/things-to-consider-for-license-plate-capture</li>
+    <li>VIVOTEK. (2024). IP camera setup for ALPR best practices for optimal recognition. https://www.vivotek.com.my/file/vivotek/camera_setup_guide_for_ALPR.pdf</li>
+    <li><span class="star">*</span> Zamir, S. W., Arora, A., Khan, S., Hayat, M., Khan, F. S., &amp; Yang, M. H. (2022). Restormer: Efficient Transformer for High-Resolution Image Restoration. <em>Proceedings of CVPR</em>, 5728&ndash;5739.</li>
+    <li><span class="star">*</span> Cohen, R., Kligvasser, I., Rivlin, E., &amp; Freedman, D. (2024). Looks Too Good To Be True: An Information-Theoretic Analysis of Hallucinations in Generative Restoration Models. <em>Advances in Neural Information Processing Systems</em>, 37. https://doi.org/10.52202/079017-0711</li>
+    <li>Aperstein, Y., Tzahar, A., Gottlib, A., Verber, T., Shagan Damti, R., &amp; Apartsin, A. (2025). Multi-pathology chest X-ray classification with rejection mechanisms. <em>arXiv</em>. https://doi.org/10.48550/arXiv.2509.10348 <span class="edit">[Update: now published as "Selective multipathology chest X-ray classification via rejection mechanisms", <em>Scientific Reports</em> (2026), https://www.nature.com/articles/s41598-026-66294-7 . Update the entry accordingly.]</span></li>
+    <li>Lahiany, A., &amp; Aperstein, Y. (2022). PTEENet: Post-trained early-exit neural networks augmentation for inference cost optimization. <em>IEEE Access</em>, 10, 69680&ndash;69687. https://doi.org/10.1109/ACCESS.2022.3187002</li>
+    <li>Aperstein, Y., &amp; Apartsin, A. (2026). CalexNet: Soft cascade-aligned training and calibration for lightweight early-exit branches. <em>Electronics</em>, 15(10), 2149. https://doi.org/10.3390/electronics15102149</li>
+    <li>Cohen, D., Efrosman, I., Aperstein, Y., &amp; Apartsin, A. (2025). Stitching the story: Creating panoramic incident summaries from body-worn footage. <em>arXiv</em>. https://doi.org/10.48550/arXiv.2509.04370</li>
+    <li>Tel Aviv-Yafo Municipality. Smart City Tel Aviv. https://www.tel-aviv.gov.il/en/WorkAndStudy/Documents/SMART%20CITY%20TEL%20AVIV.pdf</li>
+    <li>Motorola Solutions. Fixed intelligent video security. https://www.motorolasolutions.com/en_xl/video-security-access-control/fixed-video-security.html</li>
+  </ol>
+
+  <h2>Biographical Summary (Biosketch)</h2>
+  <p><span class="label">Name:</span> Yehudit Aperstein, Ph.D. &nbsp;&middot;&nbsp; <span class="label">Position:</span> Senior Lecturer, School of Software Engineering, Afeka Academic College of Engineering</p>
+
+  <h3>Education / Training</h3>
+  <table>
+    <thead><tr><th>Institution and Location</th><th>Degree</th><th>Year</th><th>Field of Study</th></tr></thead>
+    <tbody>
+      <tr><td>Haifa University</td><td>B.Sc.</td><td>1991&ndash;1994</td><td>Mathematics</td></tr>
+      <tr><td>Technion</td><td>M.Sc.</td><td>1995&ndash;1998</td><td>Game Theory</td></tr>
+      <tr><td>Weizmann Institute of Science</td><td>Ph.D.</td><td>1999&ndash;2005</td><td>Optimization / Mathematical Economics</td></tr>
+      <tr><td>Weizmann Institute of Science</td><td>&mdash;</td><td>2003&ndash;2005</td><td>Enrichment Program in Economics, Finance, and Management (MBA equivalent)</td></tr>
+      <tr><td>Bar Ilan University</td><td>Postdoc</td><td>2005&ndash;2006</td><td>Financial Mathematics</td></tr>
+      <tr><td>Tel Aviv University</td><td>Postdoc</td><td>2006&ndash;2007</td><td>Decision-Making under Uncertainty</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Personal Statement</h3>
+  <p>Dr. Yehudit Aperstein is an expert in intelligent systems and applied artificial intelligence, with over 15 years of experience leading AI research addressing real-world problems. Her research focuses on reliable AI under operational constraints, including computer vision, robust and selective prediction, efficient neural inference, and decision-making under uncertainty. She has served as Principal Investigator on 15 funded research projects totaling approximately NIS 2.35 million, including projects supported by the Israeli Ministry of Defense and the Ministry of Innovation, Science &amp; Technology, and has additional experience applying AI in industrial and operational settings.</p>
+  <p>She established and led Afeka's Graduate Program in Intelligent Systems and previously headed its Center for Data Mining and Decision Making. ReSight builds directly on her recently published research on license-plate recoverability under extreme viewing angles and combines this scientific foundation with her experience in robust visual AI, reliability-aware decision support, and applied project leadership.</p>
+
+  <h3>Positions and Honors</h3>
+  <table>
+    <thead><tr><th>Dates</th><th>Institution and Department</th><th>Rank / Position</th></tr></thead>
+    <tbody>
+      <tr><td>2004&ndash;2009</td><td>Holon Institute of Technology, Department of Sciences</td><td>Adjunct Lecturer</td></tr>
+      <tr><td>2006&ndash;2007</td><td>Ariel University, Computer Science and Mathematics Department</td><td>Adjunct Lecturer</td></tr>
+      <tr><td>2006&ndash;2012</td><td>Bar Ilan University, Department of Mathematics (Financial Mathematics Graduate Program)</td><td>Adjunct Lecturer</td></tr>
+      <tr><td>2011&ndash;2020</td><td>Afeka, Tel Aviv Academic College of Engineering</td><td>Head of Afeka Center for Data Mining and Decision Making</td></tr>
+      <tr><td>2015&ndash;2023</td><td>Afeka, Tel Aviv Academic College of Engineering</td><td>Head of Intelligent Systems Graduate Program</td></tr>
+      <tr><td>2016&ndash;2023</td><td>Afeka, Tel Aviv Academic College of Engineering</td><td>Excellent Lecturer</td></tr>
+      <tr><td>2024&ndash;current</td><td>Afeka, Tel Aviv Academic College of Engineering</td><td>Head of Afeka Interdisciplinary Center for Social Good Generative AI (ICSGen.AI)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Selected Peer-reviewed Publications</h3>
+  <ol class="refs">
+    <li>Adamenko, I., Ben Aharon, O., Aperstein, Y., &amp; Apartsin, A. (2026). Mapping License Plate Recoverability Under Extreme Viewing Angles for Opportunistic Urban Sensing. <em>AI</em>, 7(7), 237. https://www.mdpi.com/2673-2688/7/7/237</li>
+    <li>Aperstein, Y., &amp; Apartsin, A. (2026). CalexNet: Soft Cascade-Aligned Training and Calibration for Lightweight Early-Exit Branches. <em>Electronics</em>, 15(10), 2149. https://www.mdpi.com/2079-9292/15/10/2149</li>
+    <li>Lahiany, A., &amp; Aperstein, Y. (2022). PTEENet: Post-Trained Early-Exit Neural Networks Augmentation for Inference Cost Optimization. <em>IEEE Access</em>, 10, 69680&ndash;69687. https://ieeexplore.ieee.org/abstract/document/9810228</li>
+    <li>Aperstein, Y., Tzahar, A., Gottlib, A., Verber, T., Damti, R. S., &amp; Apartsin, A. (2026). Selective multipathology chest X-ray classification via rejection mechanisms. <em>Scientific Reports</em>. https://www.nature.com/articles/s41598-026-66294-7</li>
+    <li>Rokach, L., Aperstein, Y., &amp; Akselrod-Ballin, A. (2025). Deep active learning framework for chest-abdominal CT scans segmentation. <em>Expert Systems with Applications</em>, 263, 125522. https://www.sciencedirect.com/science/article/abs/pii/S0957417424023893</li>
+  </ol>
+
+  <h3>Research Support (past three years, with relevance to the proposal)</h3>
+  <ul>
+    <li><span class="label">2025&ndash;now</span> &ndash; "Optimal Decentralized Allocation of Heterogeneous Tasks to Heterogeneous Swarms (HT2HS): A novel Collaborative Filtering-based algorithm", PI, Israeli Ministry of Defense. Relevant experience in developing AI decision systems under operational constraints.</li>
+    <li><span class="label">2025</span> &ndash; "Hybrid Framework for Automatic Design of Energetic Molecules", PI, Israeli Ministry of Defense. Relevant experience in integrating advanced AI components into an application-oriented system.</li>
+    <li><span class="label">2024&ndash;now</span> &ndash; "Retrospective Analysis of the Correlation Between Glycated Hemoglobin Levels, GLP-1 Agonist Treatment, and Incidence of Common Brain Disorders", PI, Ministry of Innovation, Science &amp; Technology. Relevant experience in applied AI validation on complex real-world data.</li>
+    <li><span class="label">2024&ndash;25</span> &ndash; "A system for Generative AI-assisted retrieval and prediction of energetic material properties", PI, Israeli Ministry of Defense. Relevant experience in integrating AI-based information extraction and prediction.</li>
+    <li><span class="label">2024&ndash;25</span> &ndash; "LLM-based multiagent systems for analysis of competing hypotheses", PI, Israeli Ministry of Defense. Relevant experience in AI-supported operational decision-making.</li>
+    <li><span class="label">2023&ndash;24</span> &ndash; "Incremental PTEENet for Inference Cost Optimization", PI, Israeli Ministry of Defense. Directly relevant to efficient and resource-aware AI inference.</li>
+  </ul>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Backups and temporary artifacts
+*.bak.docx
+*.bak
+*.5mb.bak
+*.tmp
+__pycache__/
