@@ -4,3 +4,6 @@
 *.5mb.bak
 *.tmp
 __pycache__/
+
+*.keep.docx
+*.preresave.bak.docx
